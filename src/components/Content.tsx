@@ -48,7 +48,7 @@ export function Content() {
     const editedTasks = tasks.map(task => {
       if (task.id == id) {
         return {
-          ...tasks,
+          ...task,
           isComplete: !task.isComplete
         }
       }
