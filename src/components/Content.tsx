@@ -4,6 +4,7 @@ import { Task } from './Task'
 import { v4 as uuidv4 } from 'uuid';
 import { FormEvent, useState, ChangeEvent } from 'react'
 import { Emptylist } from './EmptyList'
+import { Congrats } from './Congrats';
 
 
 export interface ContentProps {
@@ -114,6 +115,8 @@ export function Content() {
         })
         }
       </div>
+
+      {numberOfCompleteTasks == numberOfTasks && numberOfCompleteTasks > 0 ? <Congrats /> : undefined}
     </div>
 
   )
